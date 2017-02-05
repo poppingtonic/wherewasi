@@ -1,0 +1,6 @@
+[package]
+name = "wherewasi"
+version = "0.1.0"
+authors = ["brian"]
+
+[dependencies]
