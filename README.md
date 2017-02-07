@@ -18,7 +18,7 @@ Remember to do this when you restart your machine
 # Building 
 
 You'll need [rust](https://github.com/rust-lang/rust). You can get it
-using [rustup](rustup.rs).
+using [rustup](https://rustup.rs).
 
 ```bash 
   $ git clone https://github.com/poppingtonic/wherewasi.git /path/to/wherewasi 
