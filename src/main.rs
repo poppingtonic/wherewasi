@@ -1,3 +1,4 @@
+use std::env;
 use std::fs::OpenOptions;
 use std::io::{stdin};
 use std::io::prelude::*;
@@ -8,11 +9,13 @@ fn main() {
     stdin().read_line(&mut note).unwrap();
 
     let note = &note[..(note.len() - 1)];
+    let home_dir = env::home_dir().expect("could not determine a home directory");
+    let path = home_dir.join(".wherewasi");
 
     let mut file =
         OpenOptions::new()
         .append(true)
-        .open("/home/brian/.wherewasi")
+        .open(path)
         .unwrap();
 
     if let Err(e) = writeln!(file, "{}", note) {
