@@ -16,6 +16,7 @@ fn main() {
     let mut file =
         OpenOptions::new()
         .append(true)
+        .create(true)
         .open(path.as_os_str())
         .unwrap();
 
