@@ -11,7 +11,7 @@ fn main() {
     let note = &note[..(note.len() - 1)];
     let home_dir = env::home_dir().expect("could not determine a home directory");
     let path = home_dir.join(".wherewasi");
-    println!("The file is now: {}", &path.display());
+    println!("I wrote your note to: {}", &path.display());
 
     let mut file =
         OpenOptions::new()
