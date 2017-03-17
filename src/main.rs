@@ -11,11 +11,12 @@ fn main() {
     let note = &note[..(note.len() - 1)];
     let home_dir = env::home_dir().expect("could not determine a home directory");
     let path = home_dir.join(".wherewasi");
+    println!("The file is now: {}", &path.display());
 
     let mut file =
         OpenOptions::new()
         .append(true)
-        .open(path)
+        .open(path.as_os_str())
         .unwrap();
 
     if let Err(e) = writeln!(file, "{}", note) {
